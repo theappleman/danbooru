@@ -20,6 +20,21 @@
 
   "background": {
     "scripts": ["background.js"]
+  },
+
+  "repository": "https://github.com/theappleman/danbooru",
+
+  "bugs": "https://github.com/theappleman/danbooru/issues",
+
+  "license": "MIT",
+
+  "dependencies": {
+    "web-ext": "^1.8.1"
+  },
+
+  "scripts": {
+    "run": "web-ext run",
+    "build": "web-ext build"
   }
 
 }
