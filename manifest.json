@@ -1,0 +1,25 @@
+{
+
+  "manifest_version": 2,
+  "name": "danbooru",
+  "version": "0.0.1",
+
+  "description": "downloads images from danbooru sites",
+
+  "permissions": ["downloads","storage"],
+
+  "content_scripts": [
+    {
+      "matches": [
+              "*://*/post/show/*",
+              "*://*/posts/*"
+      ],
+      "js": ["danbooru.js"]
+    }
+  ],
+
+  "background": {
+    "scripts": ["background.js"]
+  }
+
+}
