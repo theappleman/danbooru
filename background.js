@@ -1,9 +1,7 @@
 chrome.runtime.onMessage.addListener(notify);
 
 function notify(message) {
-  url = message.url.split("/");
-
-  filename = url[2] + "/" + message.copyright + "/" + message.fname;
+  filename = "danbooru/" + message.copyright + "/" + message.fname;
 
   chrome.downloads.download({
     url: message.url,
