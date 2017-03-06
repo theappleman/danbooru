@@ -22,7 +22,7 @@ Support for a handful of danbooru sites is provided:
 | konachan.net/.com |
 | yande.re |
 | *.sankakucomplex.com |
-| danbooru.donmai.us |
+| hijiribe./danbooru.donmai.us |
 
 ## layout
 The extension is comprised of a content script and a background script.
