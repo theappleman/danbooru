@@ -28,7 +28,9 @@ Support for a handful of danbooru sites is provided:
 The extension is comprised of a content script and a background script.
 
 The content script parses a page looking for the image URL and other metadata.
-However content scripts [cannot use the download API](https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Content_scripts#WebExtension_APIs), and sends the metadata to the background script.
+However content scripts
+[cannot use the download API](https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Content_scripts#WebExtension_APIs),
+and sends the metadata to the background script.
 
 The background script has access to the download API and actions the download.
 The download API can only trigger downloads under the user's Downloads/ directory.
