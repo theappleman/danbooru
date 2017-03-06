@@ -4,7 +4,12 @@ a = document.createElement('a');
 Surl = url.split("/");
 
 if (Surl[2].match("donmai.us")) {
-  a.href = document.querySelector("a#image-resize-link").href;
+  tmp = document.querySelector("a#image-resize-link");
+  if (tmp) {
+	a.href = tmp.href;
+  } else {
+	a.href = document.querySelectorAll('#post-information li a')[3].href
+  }
 } else {
   a.href = document.getElementById('highres').href;
 }
