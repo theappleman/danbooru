@@ -24,6 +24,9 @@ if (Surl[2].match("sankakucomplex.com")) {
 } else if (Surl[2].match("donmai.us")) {
   copyright = document.querySelector('#tag-list .search-tag').innerText;
   fname = Simg[4];
+} else if (Surl[2] == "behoimi.org") {
+  copyright = document.querySelectorAll('.tag-type-model a')[1].textContent;
+  fname = Simg[6];
 } else {
   copyright = document.querySelector('.tag-type-copyright').getAttribute('data-name');
   fname = Simg[5];

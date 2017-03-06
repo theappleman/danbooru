@@ -25,6 +25,7 @@ Support for a handful of danbooru sites is provided:
 | hijiribe./danbooru.donmai.us |
 | safebooru.org |
 | gelbooru.com |
+| behoimi.org |
 
 ## layout
 The extension is comprised of a content script and a background script.
