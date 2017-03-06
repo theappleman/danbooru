@@ -27,6 +27,9 @@ if (Surl[2].match("sankakucomplex.com")) {
 } else if (Surl[2] == "behoimi.org") {
   copyright = document.querySelectorAll('.tag-type-model a')[1].textContent;
   fname = Simg[6];
+} else if (Surl[2] == "hypnohub.net") {
+  copyright = document.querySelector('.tag-type-copyright').getAttribute('data-name');
+  fname = Simg[6];
 } else {
   copyright = document.querySelector('.tag-type-copyright').getAttribute('data-name');
   fname = Simg[5];
