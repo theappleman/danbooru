@@ -21,7 +21,7 @@ Support for a handful of danbooru sites is provided:
 |---|
 | konachan.net/.com |
 | yande.re |
-| *.sankakucomplex.com |
+| \*.sankakucomplex.com |
 | hijiribe./danbooru.donmai.us |
 | safebooru.org |
 | gelbooru.com |
