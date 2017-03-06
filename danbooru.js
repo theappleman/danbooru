@@ -4,9 +4,9 @@ a = document.createElement('a');
 Surl = url.split("/");
 
 if (Surl[2].match("donmai.us")) {
-  a.href = document.querySelector("a#image-resize-link").getAttribute("href");
+  a.href = document.querySelector("a#image-resize-link").href;
 } else {
-  a.href = document.getElementById('highres').getAttribute('href');
+  a.href = document.getElementById('highres').href;
 }
 
 img = a.href;
@@ -24,9 +24,10 @@ if (Surl[2].match("sankakucomplex.com")) {
   fname = Simg[5];
 }
 
+filename = "danbooru/" + copyright + "/" + fname;
+
+// This object is passed directly to downloads.download()
 chrome.runtime.sendMessage({
   url: img,
-  copyright: copyright.replace("/","_"),
-  fname: fname,
+  filename: filename
 });
-
