@@ -23,6 +23,8 @@ Support for a handful of danbooru sites is provided:
 | yande.re |
 | *.sankakucomplex.com |
 | hijiribe./danbooru.donmai.us |
+| safebooru.org |
+| gelbooru.com |
 
 ## layout
 The extension is comprised of a content script and a background script.

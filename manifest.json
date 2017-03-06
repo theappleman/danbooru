@@ -15,6 +15,13 @@
               "*://*/posts/*"
       ],
       "js": ["danbooru.js"]
+    },
+    {
+      "matches": [
+              "*://gelbooru.com/*",
+              "*://safebooru.org/*"
+      ],
+      "js": ["anybooru.js"]
     }
   ],
 
