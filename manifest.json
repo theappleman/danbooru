@@ -40,7 +40,7 @@
   },
 
   "scripts": {
-    "run": "web-ext run",
+    "start": "web-ext run",
     "build": "web-ext build"
   }
 
