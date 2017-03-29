@@ -20,20 +20,17 @@ Simg = img.split("/");
 
 if (Surl[2].match("sankakucomplex.com")) {
   copyright = document.querySelector('#tag-sidebar a[itemprop=keywords]').innerText;
-  fname = Simg[6].split("?")[0];
+  Simg[Simg.length-1] = Simg[Simg.length-1].split("?")[0];
 } else if (Surl[2].match("donmai.us")) {
   copyright = document.querySelector('#tag-list .search-tag').innerText;
-  fname = Simg[4];
 } else if (Surl[2] == "behoimi.org") {
   copyright = document.querySelectorAll('.tag-type-model a')[1].textContent;
-  fname = Simg[6];
 } else if (Surl[2] == "hypnohub.net") {
   copyright = document.querySelector('.tag-type-copyright').getAttribute('data-name');
-  fname = Simg[6];
 } else {
   copyright = document.querySelector('.tag-type-copyright').getAttribute('data-name');
-  fname = Simg[5];
 }
+fname = Simg[Simg.length-1];
 
 filename = "danbooru/" + copyright + "/" + fname;
 
