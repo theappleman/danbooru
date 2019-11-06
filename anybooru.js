@@ -11,7 +11,11 @@ if (url.match("s=view")) {
 			offset = 1;
 		}
 		fnoff = 6;
-		copyright = document.querySelector('.tag-type-copyright a').textContent;
+		copyright = document.querySelector('.tag-type-copyright a');
+		if (copyright === null) {
+			copyright = document.querySelector('.tag-type-metadata a');
+		}
+		copyright = copyright.textContent;
 		a.href = document.querySelectorAll("div#stats ~ div a")[offset].href;
 	} else if (Surl[2] == "gelbooru.com") {
 		offset = 0;
