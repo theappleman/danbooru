@@ -10,6 +10,8 @@ if (Surl[2].match("donmai.us")) {
   } else {
 	a.href = document.querySelectorAll('#post-information li a')[3].href
   }
+} else if (Surl[2] == "beta.sankakucomplex.com") {
+  a.href = document.querySelectorAll('img.ImageCard__image--loaded')[1].src;
 } else {
   a.href = document.getElementById('highres').href;
 }
@@ -19,7 +21,13 @@ Simg = img.split("/");
 
 
 if (Surl[2].match("sankakucomplex.com")) {
-  copyright = document.querySelector('#tag-sidebar a[itemprop=keywords]').innerText;
+  // Check the subdomain
+  subdom = Surl[2].split(".")[0]
+  if (subdom == "beta") {
+    copyright = document.querySelector('aside span[class^=MuiChip-label]').innerText;
+  } else {
+    copyright = document.querySelector('#tag-sidebar a[itemprop=keywords]').innerText;
+  }
   Simg[Simg.length-1] = Simg[Simg.length-1].split("?")[0];
 } else if (Surl[2].match("donmai.us")) {
   copyright = document.querySelector('#tag-list .search-tag').innerText;
