@@ -27,6 +27,9 @@ Support for a handful of danbooru sites is provided:
 | gelbooru.com |
 | behoimi.org |
 | hypnohub.net |
+| xbooru.com |
+| realbooru.com |
+| rule34.xxx |
 
 ## layout
 The extension is comprised of a content script and a background script.

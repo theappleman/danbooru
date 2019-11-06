@@ -20,6 +20,9 @@
     {
       "matches": [
         "*://gelbooru.com/*",
+        "*://xbooru.com/*",
+        "*://realbooru.com/*",
+        "*://rule34.xxx/*",
         "*://safebooru.org/*"
       ],
       "js": [
