@@ -1,47 +1,45 @@
 {
-
   "manifest_version": 2,
   "name": "danbooru",
   "version": "0.0.1",
-
   "description": "downloads images from danbooru sites",
-
-  "permissions": ["downloads","storage"],
-
+  "permissions": [
+    "downloads",
+    "storage"
+  ],
   "content_scripts": [
     {
       "matches": [
-              "*://*/post/show/*",
-              "*://*/posts/*"
+        "*://*/post/show/*",
+        "*://*/posts/*"
       ],
-      "js": ["danbooru.js"]
+      "js": [
+        "danbooru.js"
+      ]
     },
     {
       "matches": [
-              "*://gelbooru.com/*",
-              "*://safebooru.org/*"
+        "*://gelbooru.com/*",
+        "*://safebooru.org/*"
       ],
-      "js": ["anybooru.js"]
+      "js": [
+        "anybooru.js"
+      ]
     }
   ],
-
   "background": {
-    "scripts": ["background.js"]
+    "scripts": [
+      "background.js"
+    ]
   },
-
   "repository": "https://github.com/theappleman/danbooru",
-
   "bugs": "https://github.com/theappleman/danbooru/issues",
-
   "license": "MIT",
-
   "dependencies": {
     "web-ext": "^1.8.1"
   },
-
   "scripts": {
     "start": "web-ext run",
     "build": "web-ext build"
   }
-
 }
