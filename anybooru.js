@@ -12,13 +12,18 @@ if (url.match("s=view")) {
 		}
 		fnoff = 6;
 		copyright = document.querySelector('.tag-type-copyright a').textContent;
+		a.href = document.querySelectorAll("div#stats ~ div a")[offset].href;
 	} else if (Surl[2] == "gelbooru.com") {
 		offset = 0;
-		fnoff = 7;
-		copyright = document.querySelectorAll('.tag-type-copyright a')[1].textContent;
+		fnoff = 6;
+		copyright = document.querySelectorAll('.tag-type-copyright a')
+		if (copyright.length < 2) {
+			copyright = document.querySelectorAll('li[class^=tag-type] a')
+		}
+		copyright = copyright[1].textContent;
+		a.href = document.querySelector('#tag-list div a[target=_blank]').href;
 	}
 
-	a.href = document.querySelectorAll("div#stats ~ div a")[offset].href;
 
 	img = a.href;
 	Simg = img.split("/");
