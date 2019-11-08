@@ -33,8 +33,6 @@ if (Surl[2].match("sankakucomplex.com")) {
   copyright = document.querySelector('#tag-list .search-tag').innerText;
 } else if (Surl[2] == "behoimi.org") {
   copyright = document.querySelectorAll('.tag-type-model a')[1].textContent;
-} else if (Surl[2] == "hypnohub.net") {
-  copyright = document.querySelector('.tag-type-copyright').getAttribute('data-name');
 } else {
   copyright = document.querySelector('.tag-type-copyright').getAttribute('data-name');
 }
