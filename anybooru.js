@@ -24,6 +24,10 @@ if (url.match("s=view")) {
 		if (copyright === null) {
 			copyright = document.querySelector('.tag-type-metadata a');
 		}
+		if (copyright === null) {
+			copyright = {};
+			copyright.textContent = Surl[2];
+		}
 		copyright = copyright.textContent;
 		a.href = document.querySelectorAll("div#stats ~ div a")[offset].href;
 	}
