@@ -4,7 +4,16 @@ if (url.match("s=view")) {
 	a = document.createElement('a');
 	Surl = url.split("/");
 
-	if (Surl[2] == "safebooru.org") {
+	if (Surl[2] == "gelbooru.com") {
+		offset = 0;
+		fnoff = 6;
+		copyright = document.querySelectorAll('.tag-type-copyright a')
+		if (copyright.length < 2) {
+			copyright = document.querySelectorAll('li[class^=tag-type] a')
+		}
+		copyright = copyright[1].textContent;
+		a.href = document.querySelector('#tag-list div a[target=_blank]').href;
+	} else {
 		if (document.querySelector('#resized_notice')) {
 			offset = 2;
 		} else {
@@ -17,15 +26,6 @@ if (url.match("s=view")) {
 		}
 		copyright = copyright.textContent;
 		a.href = document.querySelectorAll("div#stats ~ div a")[offset].href;
-	} else if (Surl[2] == "gelbooru.com") {
-		offset = 0;
-		fnoff = 6;
-		copyright = document.querySelectorAll('.tag-type-copyright a')
-		if (copyright.length < 2) {
-			copyright = document.querySelectorAll('li[class^=tag-type] a')
-		}
-		copyright = copyright[1].textContent;
-		a.href = document.querySelector('#tag-list div a[target=_blank]').href;
 	}
 
 
