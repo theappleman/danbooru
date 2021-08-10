@@ -42,7 +42,7 @@
     "web-ext": "^6.2.0"
   },
   "scripts": {
-    "start": "web-ext run",
+    "start": "web-ext run --start-url https://github.com/theappleman/danbooru#danbooru",
     "build": "web-ext build"
   }
 }

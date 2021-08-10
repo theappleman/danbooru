@@ -45,6 +45,9 @@ The download API can only trigger downloads under the user's Downloads/ director
 ## testing
 Install the extension into the local browser with the `web-ext` tool.
 
+A helper script has been added for `npm run start`. You can test in chromium
+with `npm run start -- -t chromium`.
+
 ## issues
 * chrome/chromium has been seen to ignore directories in the `filename`
   parameter and download directly into ~/Downloads.
