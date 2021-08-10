@@ -39,7 +39,7 @@
   "bugs": "https://github.com/theappleman/danbooru/issues",
   "license": "MIT",
   "dependencies": {
-    "web-ext": "^3.2.1"
+    "web-ext": "^6.2.0"
   },
   "scripts": {
     "start": "web-ext run",
